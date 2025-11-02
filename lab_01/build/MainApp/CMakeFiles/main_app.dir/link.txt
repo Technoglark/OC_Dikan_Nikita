@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/main_app.dir/main.cpp.o -o main_app  -Wl,-rpath,/home/user/OC_Dikan_Nikita/lab_01/build/Vector ../Vector/libVector.so ../Number/libNumber.a 
