@@ -27,7 +27,6 @@ void* multiplyBlockPthread(void* arg) {
 
     delete data;
     pthread_exit(NULL);
-    return NULL;
 }
 
 
@@ -67,7 +66,7 @@ int main() {
     auto duration_single = std::chrono::duration_cast<std::chrono::microseconds>(end_single - start_single);
     std::cout << "Время однопоточного выполнения: " << duration_single.count() << " мкс" << std::endl;
 
-    std::cout << "\n--- Многопоточное умножение (<pthread.h>) ---" << std::endl;
+    std::cout << "\nМногопоточное умножение" << std::endl;
 
     for (int k = 1; k <= N; ++k) {
         if (N % k != 0) continue;
