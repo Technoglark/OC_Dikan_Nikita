@@ -62,9 +62,9 @@ int main() {
     singleThreadMultiply(N, A, B, C_single);
     auto end_single = std::chrono::steady_clock::now();
     auto duration_single = std::chrono::duration_cast<std::chrono::microseconds>(end_single - start_single);
-    std::cout << "Âðåìÿ îäíîïîòî÷íîãî âûïîëíåíèÿ: " << duration_single.count() << " ìêñ" << std::endl;
+    std::cout << "Ð’Ñ€ÐµÐ¼Ñ Ð¾Ð´Ð½Ð¾Ð¿Ð¾Ñ‚Ð¾Ñ‡Ð½Ð¾Ð³Ð¾ Ð¿ÐµÑ€ÐµÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ñ: " << duration_single.count() << " Ã¬ÃªÃ±" << std::endl;
 
-    std::cout << "\n--- Ìíîãîïîòî÷íîå óìíîæåíèå (<windows.h>) ---" << std::endl;
+    std::cout << "\n ÐœÐ½Ð¾Ð³Ð¾Ð¿Ð¾Ñ‚Ð¾Ñ‡Ð½Ð¾Ðµ Ð¿ÐµÑ€ÐµÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†:" << std::endl;
 
     for (int k = 1; k <= N; ++k) {
         if (N % k != 0) continue;
@@ -95,10 +95,11 @@ int main() {
         auto end_multi = std::chrono::steady_clock::now();
         auto duration_multi = std::chrono::duration_cast<std::chrono::microseconds>(end_multi - start_multi);
 
-        std::cout << "Ðàçìåð áëîêà: " << k << "x" << k
-            << ", ×èñëî ïîòîêîâ: " << threadHandles.size()
-            << ", Âðåìÿ: " << duration_multi.count() << " ìêñ" << std::endl;
+        std::cout << "Ð Ð°Ð·Ð¼ÐµÑ€ Ð±Ð»Ð¾ÐºÐ°: " << k << "x" << k
+            << ", Ð§Ð¸ÑÐ»Ð¾ Ð¿Ð¾Ñ‚Ð¾ÐºÐ¾Ð²: " << threadHandles.size()
+            << ", Ð’Ñ€ÐµÐ¼Ñ: " << duration_multi.count() << " Ð¼ÐºÑ" << std::endl;
     }
 
     return 0;
+
 }
